@@ -18,7 +18,7 @@ namespace LibUA.Benchmarks
             new NodeId(0, [], NodeIdNetType.ByteString)
         ];
 
-        public readonly static NodeId[] NumericNodes = 
+        public readonly static NodeId[] NumericNodes =
         [
             new NodeId(2, 1),
             new NodeId(2, 100),
@@ -86,9 +86,9 @@ namespace LibUA.Benchmarks
         [Benchmark]
         public void NodeIdEquivalency()
         {
-            for(int i = 0; i < Nodes.Length; i++)
+            for (int i = 0; i < Nodes.Length; i++)
             {
-                for(int j = i+1; j < Nodes.Length; j++)
+                for (int j = i + 1; j < Nodes.Length; j++)
                 {
                     _ = Nodes[i] = Nodes[j];
                 }
